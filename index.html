@@ -71,6 +71,11 @@
           <div class="flow-line" aria-hidden="true">→</div>
           <article class="flow-card reveal reveal-delay-2"><div class="step">03</div><div class="icon">▣</div><h3>Display</h3><p>在 2.9 吋 e-Paper 上更新狀態、數值與自訂圖像。</p><code>display.refresh()</code></article>
         </div>
+        <div class="chapter-proof-grid">
+          <figure class="chapter-proof reveal"><img src="assets/evidence/system-architecture.jpg" alt="ESP32 物聯網系統架構圖"><figcaption><span class="proof-kicker">SYSTEM ARCHITECTURE</span><b>資料方向先被說清楚</b><p>感測器 → ESP32 → 顯示器／MQTT Broker，控制訊息則由 Broker 回到 ESP32。</p></figcaption></figure>
+          <figure class="chapter-proof reveal reveal-delay"><img src="assets/evidence/hardware-prototype.jpg" alt="ESP32、感測器與顯示器硬體原型"><figcaption><span class="proof-kicker">HARDWARE SETUP</span><b>從接線到可操作原型</b><p>DHT11、LDR、ESP32 與顯示器組成可重現的實驗平台。</p></figcaption></figure>
+          <figure class="chapter-proof reveal reveal-delay-2"><img src="assets/evidence/mqtt-data-topic.jpg" alt="MQTT data Topic JSON 訊息畫面"><figcaption><span class="proof-kicker">MQTT EVIDENCE</span><b>感測資料真的有送出去</b><p><code>god/class305/data</code> 顯示 temp、humi、light 結構化訊息。</p></figcaption></figure>
+        </div>
       </div>
     </section>
 
