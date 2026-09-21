@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ESP32 Sensors MQTT — 讓感測資料在電子紙上安靜、清楚地被看見。">
+  <meta name="theme-color" content="#0b1115">
+  <title>ESP32 Sensors MQTT | e-Paper Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到首頁">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span>e-Paper <b>Lab</b></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">選單</button>
+    <nav id="site-nav" class="site-nav" aria-label="主要導覽">
+      <a href="#about">專案</a>
+      <a href="#flow">資料流程</a>
+      <a href="#examples">範例</a>
+      <a href="#start">開始使用</a>
+      <a class="nav-cta" href="https://github.com/godjan6688/esp32-sensors-mqtt-god" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="pulse"></span> OPEN HARDWARE / 2026</p>
+        <h1>把環境資料，<br><em>安靜地顯示。</em></h1>
+        <p class="lede">ESP32 × MQTT × 2.9 吋電子紙。從感測器讀取溫濕度，經由網路傳送，最後在低功耗的顯示器上留下清楚、可讀的狀態。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#start">開始建置 <span>↓</span></a>
+          <a class="text-link" href="README.md">閱讀文件 <span>↗</span></a>
+        </div>
+        <div class="hero-meta">
+          <span><b>01</b> 感測</span><span><b>02</b> 傳送</span><span><b>03</b> 顯示</span>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="display-card">
+          <div class="display-top"><span>EPD / 2.9"</span><span class="status-dot">LIVE</span></div>
+          <img src="sensor_dashboard_preview.png" alt="電子紙感測儀表板預覽">
+          <div class="display-bottom"><span>ROOM 01</span><span>MQTT CONNECTED</span></div>
+        </div>
+        <div class="float-tag temp"><span>℃</span><strong>24.8</strong><small>temperature</small></div>
+        <div class="float-tag humidity"><span>％</span><strong>58</strong><small>humidity</small></div>
+      </div>
+    </section>
+
+    <section id="about" class="intro shell reveal">
+      <div class="section-label"><span>01</span> WHY THIS PROJECT</div>
+      <div class="intro-grid">
+        <h2>資訊不必<br><em>一直亮著。</em></h2>
+        <div><p>這是一個以 ESP32 為核心的實驗型 IoT 專案：讀取 DHT11 / DHT22 感測資料，透過 MQTT 發布，再以 Waveshare 2.9 吋電子紙呈現。</p><p class="muted">電子紙只在內容變更時更新，讓資訊保持可見，同時降低耗電與視覺噪音。</p></div>
+      </div>
+    </section>
+
+    <section id="flow" class="flow-section">
+      <div class="shell">
+        <div class="section-label"><span>02</span> FROM SENSOR TO SCREEN</div>
+        <div class="flow-grid">
+          <article class="flow-card reveal"><div class="step">01</div><div class="icon">⌁</div><h3>Sense</h3><p>DHT11 / DHT22 讀取溫度與濕度，交給 ESP32 處理。</p><code>sensor.read()</code></article>
+          <div class="flow-line" aria-hidden="true">→</div>
+          <article class="flow-card accent reveal reveal-delay"><div class="step">02</div><div class="icon">◎</div><h3>Publish</h3><p>透過 Wi-Fi 連接 MQTT Broker，發布即時感測主題。</p><code>mqtt.publish(topic)</code></article>
+          <div class="flow-line" aria-hidden="true">→</div>
+          <article class="flow-card reveal reveal-delay-2"><div class="step">03</div><div class="icon">▣</div><h3>Display</h3><p>在 2.9 吋 e-Paper 上更新狀態、數值與自訂圖像。</p><code>display.refresh()</code></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="examples shell">
+      <div class="section-heading reveal"><div class="section-label"><span>03</span> BUILT-IN EXAMPLES</div><h2>從一個範例<br>開始你的版本。</h2></div>
+      <div class="example-list">
+        <a class="example-row reveal" href="examples/00_epaper_dht/00_epaper_dht.ino"><span class="example-number">01</span><span><strong>e-Paper + DHT</strong><small>直接在電子紙顯示感測數值</small></span><span class="arrow">↗</span></a>
+        <a class="example-row reveal reveal-delay" href="examples/00_epaper_mqtt/00_epaper_mqtt.ino"><span class="example-number">02</span><span><strong>e-Paper + MQTT</strong><small>透過 Broker 接收遠端資料</small></span><span class="arrow">↗</span></a>
+        <a class="example-row reveal reveal-delay-2" href="examples/45_epaper_mqtt/45_epaper_mqtt.ino"><span class="example-number">03</span><span><strong>完整 MQTT 儀表板</strong><small>整合網路、感測器與版面更新</small></span><span class="arrow">↗</span></a>
+        <a class="example-row reveal" href="examples/ESP32_2in9b_V4/ESP32_2in9b_V4.ino"><span class="example-number">04</span><span><strong>2.9&quot; V4 顯示器</strong><small>Waveshare epd2in9b V4 與圖像素材</small></span><span class="arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section id="start" class="start-section shell reveal">
+      <div class="start-card">
+        <div><p class="eyebrow">READY WHEN YOU ARE</p><h2>三條線，<br><em>一個可見的結果。</em></h2></div>
+        <div class="start-copy"><p>準備 ESP32、DHT 感測器與 Waveshare 電子紙，然後從範例開始。詳細的腳位、函式庫與 MQTT 設定都整理在專案文件中。</p><a class="button button-light" href="ESP32_SETUP.md">查看硬體設定 <span>↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell"><span>ESP32 SENSORS MQTT</span><span>MADE FOR QUIET DATA · <a href="https://github.com/godjan6688" target="_blank" rel="noreferrer">@godjan6688</a></span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
