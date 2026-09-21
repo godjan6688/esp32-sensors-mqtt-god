@@ -59,6 +59,20 @@
         <h2>資訊不必<br><em>一直亮著。</em></h2>
         <div><p>這是一個以 ESP32 為核心的實驗型 IoT 專案：讀取 DHT11 / DHT22 感測資料，透過 MQTT 發布，再以 Waveshare 2.9 吋電子紙呈現。</p><p class="muted">電子紙只在內容變更時更新，讓資訊保持可見，同時降低耗電與視覺噪音。</p></div>
       </div>
+      <div class="data-table-block report-summary-block reveal">
+        <div class="table-heading"><p class="eyebrow">REPORT SCOPE &amp; EVIDENCE</p><h3>版本時間線與證據分級</h3><p>依成果報告的判定方式，把最新主系統、早期開發歷程與仍需補測的部分分開呈現。</p></div>
+        <div class="data-table-wrap"><table><thead><tr><th>日期／版本</th><th>內容</th><th>定位</th></tr></thead><tbody>
+          <tr><td>2026/08/10</td><td>OLED、ThingSpeak、Google Sheets、LINE</td><td>開發歷程證據</td></tr>
+          <tr><td>2026/08/11</td><td>MQTT 資料與控制初步驗證</td><td>傳輸歷程證據</td></tr>
+          <tr><td>2026/09/14</td><td>44_ili_mqtt_ctrl_pages：ILI9225 四頁、MQTT data、gled／yled／rled 規格</td><td>最新主系統</td></tr>
+          <tr><td>2026/09/21</td><td>成果報告重新整理、補入照片與測試判定</td><td>報告更新</td></tr>
+        </tbody></table></div>
+        <div class="data-table-wrap report-subtable"><table><thead><tr><th>證據層級</th><th>可以寫成什麼</th><th>仍不能直接宣稱</th></tr></thead><tbody>
+          <tr><td>A 照片可見</td><td>畫面、Topic 或歷程服務曾出現</td><td>長時間穩定、固定週期或完整整合</td></tr>
+          <tr><td>B 規格＋照片</td><td>腳位、Topic、Payload 與頁面設計已定義</td><td>連續 callback、斷線恢復與所有 on/off 結果</td></tr>
+          <tr><td>C 開發歷程</td><td>OLED、雲端保存、圖表與 LINE 曾展示</td><td>已整合進 2026/09/14 最新主系統</td></tr>
+        </tbody></table></div>
+      </div>
     </section>
 
     <section id="flow" class="flow-section">
@@ -84,6 +98,23 @@
             <tr><td>光敏電阻 LDR</td><td>ADC GPIO33</td><td>相對亮度 0–100%</td><td>百分比不等同 lux</td></tr>
             <tr><td>ILI9225</td><td>RST25、DC26、CS27、MOSI23、SCK18、BL32</td><td>即時值、Gauge、折線</td><td>依實際接線與程式核對</td></tr>
             <tr><td>IO0／LED 輸出</td><td>IO0；GPIO15／2／4</td><td>換頁與三組展示輸出</td><td>LED 不代表家電安全控制</td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="data-table-block reveal">
+          <div class="table-heading"><p class="eyebrow">VERIFICATION LAYERS</p><h3>從感測到控制的核對層級</h3><p>報告建議依感測、顯示、傳輸、控制四層逐一驗證，避免只看到最後畫面就推論整條鏈路都已完成。</p></div>
+          <div class="data-table-wrap"><table><thead><tr><th>核對層級</th><th>應查看的證據</th><th>通過條件</th></tr></thead><tbody>
+            <tr><td>感測層</td><td>DHT11／LDR 接線、序列埠或畫面讀值</td><td>三項值可被讀取，異常值有處理說明</td></tr>
+            <tr><td>顯示層</td><td>ILI9225 四頁實機照片與換頁操作</td><td>總覽、單項 Gauge、折線頁均可辨識</td></tr>
+            <tr><td>傳輸層</td><td>MQTT GO／Panel Topic 與 JSON</td><td>data Topic 出現結構化訊息，週期另以時間戳核對</td></tr>
+            <tr><td>控制層</td><td>三組 ctrl Publish 與 LED 前後照片</td><td>每個 Topic 的 on／off 均對應正確 GPIO</td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="data-table-block reveal">
+          <div class="table-heading"><p class="eyebrow">MEASUREMENT LIMITS</p><h3>量測值的判讀限制</h3><p>成果報告提醒：畫面上的數字可以支持展示成果，但不應把單次讀值或映射百分比誤讀成完整校正與長期穩定性。</p></div>
+          <div class="data-table-wrap"><table><thead><tr><th>項目</th><th>目前呈現</th><th>可支持的說明</th><th>仍需補強</th></tr></thead><tbody>
+            <tr><td>溫度</td><td>DHT11 的 °C 讀值</td><td>可呈現當下環境溫度與頁面視覺化</td><td>記錄參考溫度、時間與取樣誤差</td></tr>
+            <tr><td>濕度</td><td>DHT11 的 % 讀值</td><td>可呈現當下相對濕度</td><td>單筆照片不能代表長期穩定或校正結果</td></tr>
+            <tr><td>亮度</td><td>GPIO33 ADC 映射 0–100%</td><td>可比較相對亮暗與折線趨勢</td><td>百分比不等同 lux，需另做感測器校正</td></tr>
           </tbody></table></div>
         </div>
       </div>
@@ -181,11 +212,21 @@
         </div>
         <div class="validation-block reveal">
           <div class="table-heading"><p class="eyebrow">LATEST SYSTEM TEST MATRIX</p><h3>最新主系統測試判定</h3><p>依報告的證據分級呈現：照片可確認當下畫面；週期、連續性與控制回饋仍需以重測紀錄補強。</p></div>
-          <div class="data-table-wrap"><table><thead><tr><th>ID</th><th>測試條件</th><th>目前證據</th><th>判定</th></tr></thead><tbody>
-            <tr><td>T01</td><td>DHT11、LDR 開機</td><td>總覽可見溫度、濕度、亮度</td><td><span class="state state-visible">照片可確認</span></td></tr>
-            <tr><td>T02</td><td>IO0 循環換頁</td><td>四頁畫面皆有成果照片</td><td><span class="state state-partial">部分可確認</span></td></tr>
-            <tr><td>T03</td><td>訂閱 data Topic</td><td>可見 JSON 訊息；週期未由單張照片證明</td><td><span class="state state-pending">需補測週期</span></td></tr>
-            <tr><td>T04</td><td>三組 ctrl on／off</td><td>Topic、Payload、GPIO 已定義</td><td><span class="state state-pending">需補測回饋</span></td></tr>
+          <div class="data-table-wrap"><table><thead><tr><th>ID</th><th>測試輸入／條件</th><th>預期結果</th><th>目前證據</th><th>判定</th></tr></thead><tbody>
+            <tr><td>T01</td><td>DHT11 與 LDR 接線、開機</td><td>ILI9225 顯示三項值</td><td>總覽可見溫度、濕度、亮度</td><td><span class="state state-visible">照片可確認展示</span></td></tr>
+            <tr><td>T02</td><td>按下 IO0 循環換頁</td><td>總覽→溫度→濕度→亮度</td><td>四頁實機畫面可見；按鍵動作需現場重做</td><td><span class="state state-partial">部分可確認</span></td></tr>
+            <tr><td>T03</td><td>連線 Broker，觀察 data Topic</td><td>每 10 秒送出 JSON</td><td>可見 god/class305/data 與多筆 JSON；週期需用時間戳重算</td><td><span class="state state-pending">需補測週期</span></td></tr>
+            <tr><td>T04</td><td>分別 Publish 三組 ctrl on／off</td><td>GPIO15／2／4 對應 LED 改變</td><td>規格已列定；缺少逐一 on／off 前後對照</td><td><span class="state state-pending">需補測回饋</span></td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="data-table-block reveal">
+          <div class="table-heading"><p class="eyebrow">ILI9225 TEST DETAIL</p><h3>ILI9225 五項測試細節</h3><p>以下依成果報告的 I01–I05 編號，把畫面證據、規格證據與尚待重測的部分拆開呈現。</p></div>
+          <div class="data-table-wrap"><table><thead><tr><th>ID</th><th>測試輸入／條件</th><th>預期結果</th><th>現有證據與判定</th><th>仍需補強</th></tr></thead><tbody>
+            <tr><td>I01</td><td>開機並讀取 DHT11、LDR</td><td>總覽頁顯示三項即時值</td><td>實機照片可確認溫度、濕度、亮度曾展示</td><td>取樣失敗處理與誤差</td></tr>
+            <tr><td>I02</td><td>按 IO0 循環換頁</td><td>總覽→溫度→濕度→亮度</td><td>四頁畫面照片可支持頁面存在</td><td>按鍵去抖與連續換頁</td></tr>
+            <tr><td>I03</td><td>檢視三個單項頁</td><td>Gauge 與最多 10 筆折線</td><td>溫度、濕度、亮度實機圖可確認視覺化</td><td>啟動初期緩衝區未滿時的行為</td></tr>
+            <tr><td>I04</td><td>訂閱 <code>god/class305/data</code></td><td>每 10 秒發布 JSON</td><td>MQTT GO 畫面可確認曾看到 JSON</td><td>以時間戳重測週期與斷線重連</td></tr>
+            <tr><td>I05</td><td>Publish gled／yled／rled on/off</td><td>GPIO15／2／4 對應 LED 改變</td><td>Topic、Payload、GPIO 規格已定義</td><td>三組 callback 的 on/off 前後對照</td></tr>
           </tbody></table></div>
         </div>
         <div class="mqtt-block reveal">
@@ -195,6 +236,12 @@
             <div class="topic-card"><span class="topic-led yellow"></span><b>風扇模擬</b><code>god/class305/ctrl/yled</code><small>GPIO2 · on / off</small></div>
             <div class="topic-card"><span class="topic-led red"></span><b>除濕機模擬</b><code>god/class305/ctrl/rled</code><small>GPIO4 · on / off</small></div>
           </div>
+          <div class="data-table-wrap report-subtable"><table><thead><tr><th>路徑</th><th>訊息／動作</th><th>觀察點</th><th>完成條件</th></tr></thead><tbody>
+            <tr><td>感測發布</td><td>ESP32 → <code>god/class305/data</code></td><td><code>{"temp":28,"humi":59,"light":7}</code></td><td>Topic 正確、JSON 可解析、時間戳可連續</td></tr>
+            <tr><td>綠色輸出</td><td>控制端 → <code>god/class305/ctrl/gled</code></td><td><code>{"state":"on"}</code></td><td>GPIO15 對應 LED 亮；off 後熄滅</td></tr>
+            <tr><td>黃色輸出</td><td>控制端 → <code>god/class305/ctrl/yled</code></td><td><code>{"state":"on"}</code></td><td>GPIO2 對應 LED 亮；off 後熄滅</td></tr>
+            <tr><td>紅色輸出</td><td>控制端 → <code>god/class305/ctrl/rled</code></td><td><code>{"state":"on"}</code></td><td>GPIO4 對應 LED 亮；off 後熄滅</td></tr>
+          </tbody></table></div>
         </div>
 
         <div class="evidence-subhead reveal">
@@ -206,6 +253,15 @@
           <figure class="history-card reveal reveal-delay"><div class="history-image"><img src="assets/evidence/mqtt-data-topic.jpg" alt="MQTT GO 顯示 god/class305/data 與 JSON 訊息"></div><figcaption><span class="history-kicker">2026/09 · TRANSPORT EVIDENCE</span><h4>MQTT data Topic</h4><p>畫面可見 <code>god/class305/data</code> 與 temp、humi、light 結構化訊息。</p></figcaption></figure>
           <figure class="history-card reveal reveal-delay-2"><div class="history-image"><img src="assets/evidence/hardware-prototype.jpg" alt="ESP32、感測器與 ILI9225 麵包板實作"></div><figcaption><span class="history-kicker">HARDWARE · PROTOTYPE</span><h4>實體接線與原型</h4><p>ESP32、DHT11、光敏電阻、顯示器與控制輸出組成可操作的實驗平台。</p></figcaption></figure>
         </div>
+        <div class="data-table-block reveal">
+          <div class="table-heading"><p class="eyebrow">OLED HISTORY MATRIX</p><h3>OLED 歷程測試項目</h3><p>OLED 照片代表 2026/08 的開發階段，用來說明先完成感測與基本顯示，再逐步加入雲端服務的驗證路徑。</p></div>
+          <div class="data-table-wrap"><table><thead><tr><th>ID</th><th>測試條件</th><th>目前證據與判定</th><th>限制</th></tr></thead><tbody>
+            <tr><td>O01</td><td>DHT11、LDR 接線後開機</td><td>照片可看到環境資料畫面，可判定曾完成基本顯示</td><td>無法由照片證明長時間穩定</td></tr>
+            <tr><td>O02</td><td>持續更新感測值</td><td>歷程記錄支持曾進行讀值與顯示整合</td><td>需重建環境，缺少連續時間戳</td></tr>
+            <tr><td>O03</td><td>加入 ThingSpeak／Google Sheets</td><td>另有 2026/08 雲端畫面，屬同階段歷程</td><td>不能由 OLED 照片單獨證明整合</td></tr>
+            <tr><td>O04</td><td>加入 LINE 異常規則</td><td>另有 LINE 歷程照片，曾完成通知展示</td><td>Token 與服務需重新建立</td></tr>
+          </tbody></table></div>
+        </div>
 
         <div class="comparison reveal">
           <div class="comparison-title"><p class="eyebrow">DISPLAY CHOICE</p><h3>OLED 與 ILI9225，怎麼選？</h3><p>不是單純的新舊替代，而是快速驗證與完整展示之間的取捨。</p></div>
@@ -213,8 +269,13 @@
             <div class="compare-row compare-head" role="row"><span>比較項目</span><span>OLED</span><span>ILI9225 TFT</span></div>
             <div class="compare-row" role="row"><span>資訊量</span><span>少量文字與數值</span><span>即時值、Gauge、折線與狀態</span></div>
             <div class="compare-row" role="row"><span>開發門檻</span><span>接線與畫面負擔較低</span><span>腳位、繪圖與頁面較複雜</span></div>
+            <div class="compare-row" role="row"><span>趨勢呈現</span><span>通常需縮減資訊或輪播</span><span>可保留最近最多 10 筆並畫折線</span></div>
+            <div class="compare-row" role="row"><span>操作方式</span><span>本案歷程以基本顯示為主</span><span>IO0 循環四頁，總覽與單項頁分工</span></div>
+            <div class="compare-row" role="row"><span>可讀性</span><span>近距離閱讀足夠，遠距離較受限</span><span>彩色區間與圖形較易從遠處辨識</span></div>
+            <div class="compare-row" role="row"><span>功耗與成本</span><span>通常較低，硬體資源需求較小</span><span>螢幕與繪圖資源需求較高</span></div>
             <div class="compare-row" role="row"><span>適合情境</span><span>快速驗證、低功耗、近距離</span><span>展場、教學、遠距離展示</span></div>
-            <div class="compare-row" role="row"><span>本案定位</span><span>2026/08 開發歷程</span><span>2026/09/14 最新主系統</span></div>
+            <div class="compare-row" role="row"><span>證據定位</span><span>2026/08 開發歷程</span><span>2026/09/14 最新主系統</span></div>
+            <div class="compare-row" role="row"><span>差異與優劣</span><span>較易起步，適合低成本與電池情境</span><span>資訊密度與展示性較高，但整合複雜度也較高</span></div>
           </div>
         </div>
         <div class="decision-table reveal">
@@ -231,6 +292,23 @@
           <figure class="history-card reveal"><div class="history-image wide"><img src="assets/evidence/google-sheets-history.jpg" alt="Google Sheets 感測資料保存畫面"></div><figcaption><span class="history-kicker">CLOUD HISTORY · 2026/08</span><h4>Google Sheets 資料保存</h4><p>曾展示時間、溫度、濕度與亮度欄位；是否整合於最新版本需重新驗證。</p></figcaption></figure>
           <figure class="history-card reveal reveal-delay"><div class="history-image wide"><img src="assets/evidence/thingspeak-history.jpg" alt="ThingSpeak 感測圖表畫面"></div><figcaption><span class="history-kicker">CLOUD HISTORY · 2026/08</span><h4>ThingSpeak 圖表</h4><p>保留量測曲線的開發歷程證據，不延伸推論為最新主系統功能。</p></figcaption></figure>
           <figure class="history-card reveal reveal-delay-2"><div class="history-image wide"><img src="assets/evidence/line-alert-history.jpg" alt="LINE 異常通知歷程畫面"></div><figcaption><span class="history-kicker">ALERT HISTORY · 2026/08</span><h4>LINE 異常通知</h4><p>曾完成超標通知展示；正式部署前應重新建立秘密設定與測試。</p></figcaption></figure>
+        </div>
+        <div class="data-table-block reveal">
+          <div class="table-heading"><p class="eyebrow">HISTORY BOUNDARY</p><h3>歷程服務與最新主系統的界線</h3><p>照片能證明曾經展示什麼，但不能單獨證明 2026/09/14 的 44 版仍保有相同雲端設定或憑證。</p></div>
+          <div class="data-table-wrap"><table><thead><tr><th>歷程功能</th><th>可由照片確認</th><th>不可由照片確認</th></tr></thead><tbody>
+            <tr><td>Google Sheets</td><td>欄位與資料列可見，曾有量測資料保存</td><td>44 版是否仍整合、Apps Script 是否仍可用</td></tr>
+            <tr><td>ThingSpeak</td><td>Field 圖表曾呈現量測曲線</td><td>最新 Topic、API 設定與持續上傳狀態</td></tr>
+            <tr><td>LINE</td><td>曾完成超標通知規則展示</td><td>重置後是否仍有可用 Token，或已整合至 44 版</td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="data-table-block reveal">
+          <div class="table-heading"><p class="eyebrow">LINE HISTORY RULES</p><h3>LINE 異常通知歷程規則</h3><p>這是 2026/08 的開發歷程，不是最新主系統已完成的功能宣告；重新部署時需使用新的秘密設定與測試紀錄。</p></div>
+          <div class="data-table-wrap"><table><thead><tr><th>規則</th><th>歷程設定</th><th>報告判定</th></tr></thead><tbody>
+            <tr><td>溫度門檻</td><td>&gt; 28 °C</td><td>歷程規則；最新主系統需重新測試</td></tr>
+            <tr><td>濕度門檻</td><td>&gt; 70%</td><td>歷程規則；最新主系統需重新測試</td></tr>
+            <tr><td>通知節奏</td><td>首次異常立即通知；持續異常約每 30 秒</td><td>須以重測紀錄確認實際計時</td></tr>
+            <tr><td>恢復後再次異常</td><td>恢復後下一次異常重新立即通知</td><td>需完成正常→異常→持續→恢復→再次異常五狀態驗證</td></tr>
+          </tbody></table></div>
         </div>
       </div>
     </section>
