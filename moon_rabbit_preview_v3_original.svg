@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="296" height="128" viewBox="0 0 296 128">
+  <rect width="296" height="128" fill="#ffffff"/>
+
+  <!-- Original red moon composition -->
+  <circle cx="82" cy="64" r="53" fill="#d71920"/>
+  <circle cx="54" cy="50" r="8" fill="#ef5558" opacity="0.45"/>
+  <circle cx="105" cy="69" r="6" fill="#aa1017" opacity="0.4"/>
+  <circle cx="88" cy="94" r="11" fill="#aa1017" opacity="0.28"/>
+
+  <!-- Mortar: original low oval/trapezoid silhouette -->
+  <path d="M43 88 Q82 83 139 89 L133 108 Q94 119 51 108 Z" fill="#111111"/>
+  <ellipse cx="91" cy="88" rx="47" ry="8" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+  <ellipse cx="91" cy="88" rx="38" ry="4.5" fill="#d71920"/>
+
+  <!-- Two newly drawn rabbit silhouettes, deliberately not traced from the reference -->
+  <g fill="#111111">
+    <!-- Crouching rabbit, pestle resting diagonally over shoulder -->
+    <ellipse cx="63" cy="72" rx="13" ry="17" transform="rotate(-12 63 72)"/>
+    <circle cx="61" cy="54" r="10"/>
+    <!-- asymmetrical curved ears -->
+    <path d="M57 47 Q45 37 49 23 Q60 31 63 47 Z"/>
+    <path d="M65 47 Q70 33 80 30 Q80 44 69 51 Z"/>
+    <circle cx="59" cy="53" r="1.7" fill="#ffffff"/>
+    <!-- bent legs and round tail -->
+    <path d="M55 82 Q45 88 49 96 L61 94 L66 84 Z"/>
+    <path d="M67 81 Q76 87 74 96 L63 96 L61 86 Z"/>
+    <circle cx="77" cy="78" r="5"/>
+    <!-- arm holding a diagonal pestle -->
+    <path d="M54 64 Q43 58 38 49 L42 45 Q50 54 60 56 Z"/>
+    <path d="M39 50 L26 35 L30 31 L45 47 Z"/>
+    <circle cx="28" cy="33" r="5"/>
+
+    <!-- Airborne rabbit, angled downward with pestle striking the mortar -->
+    <ellipse cx="108" cy="52" rx="12" ry="16" transform="rotate(24 108 52)"/>
+    <circle cx="110" cy="35" r="10"/>
+    <!-- distinct forked ear silhouette -->
+    <path d="M106 28 Q98 14 103 7 Q112 15 113 28 Z"/>
+    <path d="M113 28 Q119 14 128 13 Q125 27 116 32 Z"/>
+    <circle cx="113" cy="34" r="1.7" fill="#ffffff"/>
+    <!-- legs swept back to show a jump -->
+    <path d="M102 62 Q91 67 82 62 L84 57 Q94 59 105 53 Z"/>
+    <path d="M113 63 Q124 68 134 61 L137 66 Q126 75 114 71 Z"/>
+    <circle cx="136" cy="61" r="4.5"/>
+    <!-- arms and downward pestle -->
+    <path d="M103 45 Q95 53 91 64 L96 66 Q102 56 110 51 Z"/>
+    <path d="M114 47 Q120 55 122 65 L117 67 Q113 58 108 53 Z"/>
+    <path d="M93 63 L119 91 L124 87 L99 59 Z"/>
+    <circle cx="121" cy="90" r="5"/>
+  </g>
+
+  <!-- Greeting panel -->
+  <rect x="151" y="12" width="134" height="104" rx="6" fill="#fff7e8" stroke="#d71920" stroke-width="3"/>
+  <path d="M158 22 H278" stroke="#d71920" stroke-width="2"/>
+  <text x="165" y="43" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="16" font-weight="700" fill="#111111">中秋節快樂</text>
+  <text x="165" y="68" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="13" font-weight="700" fill="#d71920">月圓人團圓</text>
+  <text x="165" y="91" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="13" font-weight="700" fill="#111111">幸福好事連連</text>
+  <path d="M158 101 H278" stroke="#d71920" stroke-width="2"/>
+  <text x="167" y="111" font-family="Arial, sans-serif" font-size="7" letter-spacing="1.2" fill="#111111">HAPPY MOON FESTIVAL</text>
+</svg>

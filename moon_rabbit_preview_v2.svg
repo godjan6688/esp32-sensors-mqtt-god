@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="296" height="128" viewBox="0 0 296 128">
+  <rect width="296" height="128" fill="#ffffff"/>
+
+  <!-- Red harvest moon -->
+  <circle cx="82" cy="64" r="53" fill="#d71920"/>
+  <circle cx="64" cy="40" r="7" fill="#ed4b50" opacity="0.55"/>
+  <circle cx="103" cy="80" r="10" fill="#aa1017" opacity="0.38"/>
+  <circle cx="91" cy="30" r="4" fill="#aa1017" opacity="0.38"/>
+
+  <!-- Mortar bowl -->
+  <path d="M43 91 Q82 84 144 91 L137 112 Q97 121 55 112 Z" fill="#111111"/>
+  <ellipse cx="94" cy="91" rx="49" ry="9" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+  <ellipse cx="94" cy="91" rx="39" ry="5" fill="#d71920"/>
+
+  <!-- Black silhouettes: one standing with pestle raised, one jumping down -->
+  <g fill="#111111">
+    <!-- Standing jade rabbit on the left -->
+    <ellipse cx="66" cy="75" rx="12" ry="18"/>
+    <circle cx="63" cy="56" r="10"/>
+    <ellipse cx="58" cy="39" rx="4" ry="14" transform="rotate(-12 58 39)"/>
+    <ellipse cx="68" cy="38" rx="4" ry="14" transform="rotate(9 68 38)"/>
+    <circle cx="60" cy="55" r="1.6" fill="#ffffff"/>
+    <!-- standing legs -->
+    <path d="M59 87 L56 105 L63 105 L68 89 Z"/>
+    <path d="M68 88 L71 105 L78 105 L74 85 Z"/>
+    <path d="M54 104 Q60 101 66 105 L66 108 L52 108 Z"/>
+    <path d="M69 104 Q75 101 80 105 L80 108 L67 108 Z"/>
+    <!-- raised arms and pestle -->
+    <path d="M57 69 Q48 61 51 51 L56 52 Q55 59 63 64 Z"/>
+    <path d="M72 68 Q81 60 78 50 L73 52 Q74 59 66 64 Z"/>
+    <path d="M57 51 L73 18 L78 20 L62 54 Z"/>
+    <circle cx="75" cy="18" r="5"/>
+
+    <!-- Jumping jade rabbit on the right, descending into the mortar -->
+    <ellipse cx="108" cy="57" rx="12" ry="17" transform="rotate(18 108 57)"/>
+    <circle cx="110" cy="40" r="10"/>
+    <ellipse cx="105" cy="23" rx="4" ry="14" transform="rotate(-18 105 23)"/>
+    <ellipse cx="115" cy="24" rx="4" ry="14" transform="rotate(12 115 24)"/>
+    <circle cx="113" cy="39" r="1.6" fill="#ffffff"/>
+    <!-- airborne legs -->
+    <path d="M101 67 Q88 74 79 69 L81 64 Q92 66 104 58 Z"/>
+    <path d="M113 68 Q124 76 134 71 L132 66 Q122 68 112 59 Z"/>
+    <path d="M79 68 L72 72 L78 75 L86 71 Z"/>
+    <path d="M133 70 L141 72 L136 77 L129 73 Z"/>
+    <!-- downward arms and pestle -->
+    <path d="M104 50 Q96 59 91 70 L96 73 Q102 62 110 57 Z"/>
+    <path d="M114 52 Q120 60 123 70 L118 72 Q114 63 108 58 Z"/>
+    <path d="M93 69 L119 99 L124 95 L98 66 Z"/>
+    <circle cx="122" cy="98" r="5"/>
+  </g>
+
+  <!-- Greeting panel -->
+  <rect x="151" y="12" width="134" height="104" rx="6" fill="#fff7e8" stroke="#d71920" stroke-width="3"/>
+  <path d="M158 22 H278" stroke="#d71920" stroke-width="2"/>
+  <text x="165" y="43" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="16" font-weight="700" fill="#111111">中秋節快樂</text>
+  <text x="165" y="68" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="13" font-weight="700" fill="#d71920">月圓人團圓</text>
+  <text x="165" y="91" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="13" font-weight="700" fill="#111111">幸福好事連連</text>
+  <path d="M158 101 H278" stroke="#d71920" stroke-width="2"/>
+  <text x="167" y="111" font-family="Arial, sans-serif" font-size="7" letter-spacing="1.2" fill="#111111">HAPPY MOON FESTIVAL</text>
+</svg>

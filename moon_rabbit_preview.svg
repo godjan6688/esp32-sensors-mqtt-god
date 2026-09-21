@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="296" height="128" viewBox="0 0 296 128">
+  <rect width="296" height="128" fill="#ffffff"/>
+
+  <!-- Red harvest moon -->
+  <circle cx="82" cy="64" r="53" fill="#d71920"/>
+  <circle cx="65" cy="42" r="7" fill="#e83a3f" opacity="0.55"/>
+  <circle cx="102" cy="78" r="10" fill="#b51219" opacity="0.35"/>
+  <circle cx="91" cy="31" r="4" fill="#b51219" opacity="0.35"/>
+
+  <!-- Two black rabbit silhouettes pounding rice -->
+  <g fill="#111111">
+    <!-- Rabbit 1 -->
+    <ellipse cx="63" cy="76" rx="13" ry="17"/>
+    <circle cx="61" cy="57" r="10"/>
+    <ellipse cx="56" cy="40" rx="4" ry="13" transform="rotate(-13 56 40)"/>
+    <ellipse cx="66" cy="39" rx="4" ry="14" transform="rotate(10 66 39)"/>
+    <circle cx="58" cy="56" r="1.7" fill="#ffffff"/>
+    <path d="M50 84 Q40 91 48 98 L61 94 L72 97 Q76 92 70 87 Z"/>
+    <path d="M67 68 Q77 73 80 86 L75 88 Q71 79 64 77 Z"/>
+    <!-- Pestle 1 -->
+    <path d="M76 66 L84 61 L95 91 L89 94 Z"/>
+
+    <!-- Rabbit 2 -->
+    <ellipse cx="103" cy="78" rx="13" ry="17"/>
+    <circle cx="101" cy="59" r="10"/>
+    <ellipse cx="96" cy="42" rx="4" ry="13" transform="rotate(-13 96 42)"/>
+    <ellipse cx="106" cy="41" rx="4" ry="14" transform="rotate(10 106 41)"/>
+    <circle cx="98" cy="58" r="1.7" fill="#ffffff"/>
+    <path d="M90 86 Q80 93 88 100 L101 96 L112 99 Q116 94 110 89 Z"/>
+    <path d="M107 70 Q117 75 120 88 L115 90 Q111 81 104 79 Z"/>
+    <!-- Pestle 2 -->
+    <path d="M116 68 L124 63 L135 93 L129 96 Z"/>
+  </g>
+
+  <!-- Mortar bowl -->
+  <path d="M52 91 Q83 84 143 91 L137 111 Q98 120 58 111 Z" fill="#111111"/>
+  <ellipse cx="98" cy="91" rx="47" ry="9" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+  <ellipse cx="98" cy="91" rx="38" ry="5" fill="#d71920"/>
+
+  <!-- Greeting panel -->
+  <rect x="151" y="12" width="134" height="104" rx="6" fill="#fff7e8" stroke="#d71920" stroke-width="3"/>
+  <path d="M158 22 H278" stroke="#d71920" stroke-width="2"/>
+  <text x="165" y="43" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="16" font-weight="700" fill="#111111">中秋節快樂</text>
+  <text x="165" y="68" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="13" font-weight="700" fill="#d71920">月圓人團圓</text>
+  <text x="165" y="91" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="13" font-weight="700" fill="#111111">幸福好事連連</text>
+  <path d="M158 101 H278" stroke="#d71920" stroke-width="2"/>
+  <text x="167" y="111" font-family="Arial, sans-serif" font-size="7" letter-spacing="1.2" fill="#111111">HAPPY MOON FESTIVAL</text>
+</svg>

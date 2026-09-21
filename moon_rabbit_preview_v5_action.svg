@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="296" height="128" viewBox="0 0 296 128">
+  <rect width="296" height="128" fill="#ffffff"/>
+
+  <!-- Larger red moon, close to the reference composition -->
+  <circle cx="82" cy="64" r="57" fill="#d71920"/>
+  <circle cx="55" cy="42" r="8" fill="#ef555a" opacity="0.45"/>
+  <circle cx="108" cy="79" r="10" fill="#a90f16" opacity="0.32"/>
+
+  <!-- Large, easy-to-read mortar -->
+  <path d="M40 87 Q82 80 143 87 L136 111 Q94 122 48 111 Z" fill="#111111"/>
+  <ellipse cx="91" cy="87" rx="51" ry="10" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+  <ellipse cx="91" cy="87" rx="41" ry="4.5" fill="#d71920"/>
+
+  <!-- Original enlarged silhouettes -->
+  <g fill="#111111" stroke="#111111" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Standing rabbit: large body, feet on the ground, pestle raised high -->
+    <ellipse cx="56" cy="68" rx="16" ry="22"/>
+    <circle cx="56" cy="43" r="13"/>
+    <path d="M49 34 Q39 14 46 3 Q59 17 61 35 Z"/>
+    <path d="M63 34 Q69 14 82 10 Q79 29 68 39 Z"/>
+    <circle cx="61" cy="42" r="2" fill="#ffffff" stroke="none"/>
+    <!-- standing feet -->
+    <path d="M45 84 L40 108 L51 108 L58 87 Z" stroke="none"/>
+    <path d="M60 85 L66 108 L77 108 L69 83 Z" stroke="none"/>
+    <!-- arms clearly extended upward -->
+    <path d="M47 59 L36 34" fill="none" stroke-width="7"/>
+    <path d="M64 58 L75 34" fill="none" stroke-width="7"/>
+    <!-- huge raised pestle -->
+    <path d="M37 35 L71 5" fill="none" stroke-width="7"/>
+    <circle cx="73" cy="4" r="7" stroke="none"/>
+    <circle cx="76" cy="69" r="6" stroke="none"/>
+
+    <!-- Jumping rabbit: large airborne body, legs kicked back, pestle vertical down -->
+    <ellipse cx="109" cy="48" rx="17" ry="22" transform="rotate(20 109 48)"/>
+    <circle cx="111" cy="23" r="13"/>
+    <path d="M104 16 Q95 -2 102 -12 Q116 2 116 18 Z"/>
+    <path d="M116 17 Q124 0 138 -2 Q134 16 120 24 Z"/>
+    <circle cx="116" cy="22" r="2" fill="#ffffff" stroke="none"/>
+    <!-- unmistakable airborne legs -->
+    <path d="M98 59 Q78 72 63 62" fill="none" stroke-width="9"/>
+    <path d="M116 62 Q137 73 149 57" fill="none" stroke-width="9"/>
+    <circle cx="61" cy="61" r="6" stroke="none"/>
+    <circle cx="151" cy="55" r="6" stroke="none"/>
+    <!-- both arms point down to the mortar -->
+    <path d="M101 43 L92 69" fill="none" stroke-width="7"/>
+    <path d="M115 44 L122 69" fill="none" stroke-width="7"/>
+    <!-- vertical pestle and impact point -->
+    <path d="M95 67 L116 96" fill="none" stroke-width="8"/>
+    <circle cx="118" cy="99" r="8" stroke="none"/>
+  </g>
+
+  <!-- Simple motion strokes make the actions obvious -->
+  <path d="M82 25 L88 17 M86 31 L95 23" stroke="#111111" stroke-width="3" stroke-linecap="round"/>
+  <path d="M126 78 L137 86 M121 83 L130 94" stroke="#111111" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Greeting panel -->
+  <rect x="156" y="12" width="129" height="104" rx="6" fill="#fff7e8" stroke="#d71920" stroke-width="3"/>
+  <path d="M163 22 H278" stroke="#d71920" stroke-width="2"/>
+  <text x="170" y="43" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="16" font-weight="700" fill="#111111">中秋節快樂</text>
+  <text x="170" y="68" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="13" font-weight="700" fill="#d71920">月圓人團圓</text>
+  <text x="170" y="91" font-family="Microsoft JhengHei, Noto Sans CJK TC, sans-serif" font-size="13" font-weight="700" fill="#111111">幸福好事連連</text>
+  <path d="M163 101 H278" stroke="#d71920" stroke-width="2"/>
+  <text x="172" y="111" font-family="Arial, sans-serif" font-size="7" letter-spacing="1.1" fill="#111111">HAPPY MOON FESTIVAL</text>
+</svg>

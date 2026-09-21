@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="296" height="128" viewBox="0 0 296 128">
+  <rect width="296" height="128" fill="#ffffff"/>
+
+  <!-- Clean, fully contained circular moon -->
+  <circle cx="68" cy="64" r="56" fill="#d71920"/>
+
+  <!-- White clouds with clear black outlines; all cloud shapes are fully inside the canvas -->
+  <g fill="#ffffff" stroke="#111111" stroke-width="2.2" stroke-linejoin="round">
+    <path d="M5 29
+             C5 24 9 20 14 20
+             C16 14 22 11 28 13
+             C31 8 38 7 42 12
+             C48 11 52 15 52 20
+             C57 21 60 24 60 29
+             Z"/>
+    <path d="M4 102
+             C4 97 8 94 13 94
+             C15 88 21 85 27 87
+             C30 82 37 81 41 86
+             C47 85 51 89 51 94
+             C56 95 59 98 59 102
+             Z"/>
+    <path d="M105 100
+             C105 95 109 92 114 92
+             C116 86 122 83 128 85
+             C131 80 138 79 142 84
+             C147 83 151 87 151 92
+             C156 93 159 96 159 100
+             Z"/>
+  </g>
+
+  <!-- Mortar -->
+  <path d="M39 85 Q68 79 103 84 L99 108 Q70 116 43 108 Z" fill="#111111"/>
+  <ellipse cx="70" cy="84" rx="34" ry="8" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <ellipse cx="70" cy="84" rx="27" ry="3.5" fill="#d71920"/>
+
+  <!-- Standing rabbit, clearly lifting the pestle -->
+  <g fill="#111111" stroke="#111111" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="51" cy="65" rx="13" ry="20"/>
+    <circle cx="51" cy="44" r="11"/>
+    <path d="M45 35 Q38 19 42 10 Q51 21 54 36 Z"/>
+    <path d="M56 35 Q60 19 68 14 Q69 28 61 38 Z"/>
+    <path d="M43 61 L33 37" fill="none" stroke-width="6"/>
+    <path d="M58 59 L67 36" fill="none" stroke-width="6"/>
+    <path d="M34 38 L62 16" fill="none" stroke-width="6"/>
+    <circle cx="65" cy="13" r="6"/>
+    <path d="M43 82 L38 105 L48 105 L53 84 Z" stroke="none"/>
+    <path d="M54 82 L60 105 L70 105 L63 80 Z" stroke="none"/>
+    <circle cx="68" cy="68" r="5" stroke="none"/>
+  </g>
+
+  <!-- Jumping rabbit, clearly bringing the pestle down -->
+  <g fill="#111111" stroke="#111111" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="91" cy="49" rx="14" ry="19" transform="rotate(18 91 49)"/>
+    <circle cx="93" cy="29" r="11"/>
+    <path d="M87 20 Q81 7 85 1 Q94 10 96 22 Z"/>
+    <path d="M98 20 Q103 7 111 4 Q111 17 102 25 Z"/>
+    <path d="M82 58 Q69 71 57 65" fill="none" stroke-width="7"/>
+    <path d="M97 61 Q112 71 123 60" fill="none" stroke-width="7"/>
+    <circle cx="55" cy="64" r="5" stroke="none"/>
+    <circle cx="126" cy="58" r="5" stroke="none"/>
+    <path d="M84 45 L78 67" fill="none" stroke-width="6"/>
+    <path d="M98 47 L105 68" fill="none" stroke-width="6"/>
+    <path d="M81 66 L101 94" fill="none" stroke-width="7"/>
+    <circle cx="104" cy="98" r="7"/>
+  </g>
+
+  <!-- Motion marks -->
+  <path d="M76 27 L82 20 M80 33 L89 25" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M111 78 L120 85 M108 84 L116 93" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- High-contrast greeting area -->
+  <text x="153" y="13" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="7.2" font-weight="700" fill="#111111">勞動部高屏澎東分署敬祝</text>
+  <line x1="153" y1="19" x2="291" y2="19" stroke="#d71920" stroke-width="2"/>
+  <text x="153" y="43" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="17" font-weight="900" fill="#111111">中秋節快樂</text>
+  <text x="153" y="68" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="15" font-weight="900" fill="#d71920">月圓人團圓</text>
+  <text x="153" y="93" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="14" font-weight="900" fill="#111111">幸福好事連連</text>
+  <line x1="153" y1="103" x2="291" y2="103" stroke="#d71920" stroke-width="2"/>
+  <text x="153" y="117" font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#111111">HAPPY MOON FESTIVAL</text>
+</svg>
