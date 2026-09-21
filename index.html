@@ -20,6 +20,7 @@
       <a href="#about">專案</a>
       <a href="#flow">資料流程</a>
       <a href="#examples">範例</a>
+      <a href="#成果">成果照片</a>
       <a href="#start">開始使用</a>
       <a class="nav-cta" href="https://github.com/godjan6688/esp32-sensors-mqtt-god" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
     </nav>
@@ -80,6 +81,59 @@
         <a class="example-row reveal reveal-delay" href="examples/00_epaper_mqtt/00_epaper_mqtt.ino"><span class="example-number">02</span><span><strong>e-Paper + MQTT</strong><small>透過 Broker 接收遠端資料</small></span><span class="arrow">↗</span></a>
         <a class="example-row reveal reveal-delay-2" href="examples/45_epaper_mqtt/45_epaper_mqtt.ino"><span class="example-number">03</span><span><strong>完整 MQTT 儀表板</strong><small>整合網路、感測器與版面更新</small></span><span class="arrow">↗</span></a>
         <a class="example-row reveal" href="examples/ESP32_2in9b_V4/ESP32_2in9b_V4.ino"><span class="example-number">04</span><span><strong>2.9&quot; V4 顯示器</strong><small>Waveshare epd2in9b V4 與圖像素材</small></span><span class="arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section id="成果" class="evidence-section">
+      <div class="shell">
+        <div class="section-heading evidence-heading reveal">
+          <div class="section-label"><span>04</span> PROJECT EVIDENCE</div>
+          <h2>把成果放回<br><em>它發生的現場。</em></h2>
+          <p>以下內容整理自 2026/09/14 物聯網成果報告與成果照片。最新主系統與早期開發歷程分開呈現，讓每張照片的證據範圍清楚可讀。</p>
+        </div>
+
+        <div class="evidence-feature reveal">
+          <div class="evidence-photo"><img src="assets/evidence/ili9225-overview.jpg" alt="ILI9225 最新主系統顯示溫度、濕度、亮度與 MQTT 狀態"></div>
+          <div class="evidence-feature-copy">
+            <p class="eyebrow">LATEST SYSTEM · 2026/09/14</p>
+            <h3>ILI9225 四頁環境監測主系統</h3>
+            <p>ESP32 讀取 DHT11 與光敏電阻，將即時值、Gauge、最近資料折線與 Wi-Fi／MQTT 狀態分頁呈現在 ILI9225。畫面可直接確認當下的感測與顯示成果；發布週期、斷線重連與三組控制則保留為後續重測項目。</p>
+            <div class="evidence-tags"><span>ESP32 Dev Module</span><span>ILI9225 TFT</span><span>MQTT data</span><span>DHT11 + LDR</span></div>
+          </div>
+        </div>
+
+        <div class="photo-grid latest-photos">
+          <figure class="photo-card reveal"><img src="assets/evidence/ili9225-temperature.jpg" alt="ILI9225 溫度 Gauge 與最近資料折線"><figcaption><b>溫度頁</b><span>Gauge + 最近資料折線</span></figcaption></figure>
+          <figure class="photo-card reveal reveal-delay"><img src="assets/evidence/ili9225-humidity.jpg" alt="ILI9225 濕度 Gauge 與最近資料折線"><figcaption><b>濕度頁</b><span>單項數值與趨勢閱讀</span></figcaption></figure>
+          <figure class="photo-card reveal reveal-delay-2"><img src="assets/evidence/ili9225-light.jpg" alt="ILI9225 亮度 Gauge 與最近資料折線"><figcaption><b>亮度頁</b><span>相對亮度百分比，不等同 lux</span></figcaption></figure>
+        </div>
+
+        <div class="evidence-subhead reveal">
+          <div><p class="eyebrow">DEVELOPMENT HISTORY</p><h3>從 OLED 驗證，到 ILI9225 展示</h3></div>
+          <p>OLED 階段先驗證感測器接線、讀值與基本顯示；ILI9225 則將多項數值、趨勢與狀態整合成適合現場展示的畫面。兩者是不同階段的證據，不視為同一版韌體同時完成。</p>
+        </div>
+        <div class="history-grid">
+          <figure class="history-card oled-card reveal"><div class="history-image"><img src="assets/evidence/oled-history.jpg" alt="OLED 早期環境資料顯示畫面"></div><figcaption><span class="history-kicker">2026/08 · EARLY PROTOTYPE</span><h4>OLED 基礎驗證</h4><p>小尺寸、低負擔，適合先確認 DHT11／LDR 與畫面更新。</p></figcaption></figure>
+          <figure class="history-card reveal reveal-delay"><div class="history-image"><img src="assets/evidence/mqtt-data-topic.jpg" alt="MQTT GO 顯示 god/class305/data 與 JSON 訊息"></div><figcaption><span class="history-kicker">2026/09 · TRANSPORT EVIDENCE</span><h4>MQTT data Topic</h4><p>畫面可見 <code>god/class305/data</code> 與 temp、humi、light 結構化訊息。</p></figcaption></figure>
+          <figure class="history-card reveal reveal-delay-2"><div class="history-image"><img src="assets/evidence/hardware-prototype.jpg" alt="ESP32、感測器與 ILI9225 麵包板實作"></div><figcaption><span class="history-kicker">HARDWARE · PROTOTYPE</span><h4>實體接線與原型</h4><p>ESP32、DHT11、光敏電阻、顯示器與控制輸出組成可操作的實驗平台。</p></figcaption></figure>
+        </div>
+
+        <div class="comparison reveal">
+          <div class="comparison-title"><p class="eyebrow">DISPLAY CHOICE</p><h3>OLED 與 ILI9225，怎麼選？</h3><p>不是單純的新舊替代，而是快速驗證與完整展示之間的取捨。</p></div>
+          <div class="comparison-table" role="table" aria-label="OLED 與 ILI9225 比較">
+            <div class="compare-row compare-head" role="row"><span>比較項目</span><span>OLED</span><span>ILI9225 TFT</span></div>
+            <div class="compare-row" role="row"><span>資訊量</span><span>少量文字與數值</span><span>即時值、Gauge、折線與狀態</span></div>
+            <div class="compare-row" role="row"><span>開發門檻</span><span>接線與畫面負擔較低</span><span>腳位、繪圖與頁面較複雜</span></div>
+            <div class="compare-row" role="row"><span>適合情境</span><span>快速驗證、低功耗、近距離</span><span>展場、教學、遠距離展示</span></div>
+            <div class="compare-row" role="row"><span>本案定位</span><span>2026/08 開發歷程</span><span>2026/09/14 最新主系統</span></div>
+          </div>
+        </div>
+
+        <div class="history-grid service-grid">
+          <figure class="history-card reveal"><div class="history-image wide"><img src="assets/evidence/google-sheets-history.jpg" alt="Google Sheets 感測資料保存畫面"></div><figcaption><span class="history-kicker">CLOUD HISTORY · 2026/08</span><h4>Google Sheets 資料保存</h4><p>曾展示時間、溫度、濕度與亮度欄位；是否整合於最新版本需重新驗證。</p></figcaption></figure>
+          <figure class="history-card reveal reveal-delay"><div class="history-image wide"><img src="assets/evidence/thingspeak-history.jpg" alt="ThingSpeak 感測圖表畫面"></div><figcaption><span class="history-kicker">CLOUD HISTORY · 2026/08</span><h4>ThingSpeak 圖表</h4><p>保留量測曲線的開發歷程證據，不延伸推論為最新主系統功能。</p></figcaption></figure>
+          <figure class="history-card reveal reveal-delay-2"><div class="history-image wide"><img src="assets/evidence/line-alert-history.jpg" alt="LINE 異常通知歷程畫面"></div><figcaption><span class="history-kicker">ALERT HISTORY · 2026/08</span><h4>LINE 異常通知</h4><p>曾完成超標通知展示；正式部署前應重新建立秘密設定與測試。</p></figcaption></figure>
+        </div>
       </div>
     </section>
 
