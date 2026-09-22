@@ -87,7 +87,7 @@
         </div>
         <div class="chapter-proof-grid">
           <figure class="chapter-proof reveal"><img src="assets/evidence/system-architecture.jpg" alt="ESP32 物聯網系統架構圖"><figcaption><span class="proof-kicker">SYSTEM ARCHITECTURE</span><b>資料方向先被說清楚</b><p>感測器 → ESP32 → 顯示器／MQTT Broker，控制訊息則由 Broker 回到 ESP32。</p></figcaption></figure>
-          <figure class="chapter-proof reveal reveal-delay"><img src="assets/evidence/hardware-prototype.jpg" alt="ESP32、感測器與顯示器硬體原型"><figcaption><span class="proof-kicker">HARDWARE SETUP</span><b>從接線到可操作原型</b><p>DHT11、LDR、ESP32 與顯示器組成可重現的實驗平台。</p></figcaption></figure>
+          <figure class="chapter-proof reveal reveal-delay"><img src="assets/evidence/hardware-prototype-upright.jpg" alt="ESP32、感測器與 OLED 顯示器硬體原型"><figcaption><span class="proof-kicker">HARDWARE SETUP</span><b>從接線到可操作原型</b><p>DHT11、LDR、ESP32 與顯示器組成可重現的實驗平台。</p></figcaption></figure>
           <figure class="chapter-proof reveal reveal-delay-2"><img src="assets/evidence/mqtt-data-topic.jpg" alt="MQTT data Topic JSON 訊息畫面"><figcaption><span class="proof-kicker">MQTT EVIDENCE</span><b>感測資料真的有送出去</b><p><code>god/class305/data</code> 顯示 temp、humi、light 結構化訊息。</p></figcaption></figure>
         </div>
         <div class="data-table-block reveal">
@@ -155,14 +155,14 @@
         </div>
 
         <div class="screen-only-heading reveal">
-          <div><p class="eyebrow">SCREEN ONLY · CROPPED RESULTS</p><h3>電子紙畫面成果</h3></div>
-          <p>將成果照片裁切為只保留顯示器畫面，移除麵包板、ESP32 與接線，方便直接閱讀畫面設計與量測結果。</p>
+          <div><p class="eyebrow">SCREEN ONLY · CROPPED RESULTS</p><h3>ILI9225 顯示畫面成果</h3></div>
+          <p>這組成果是 ILI9225 彩色顯示器畫面，不是電子紙；照片已裁切為只保留顯示器內容，移除麵包板、ESP32 與接線，方便閱讀畫面設計與量測結果。</p>
         </div>
         <div class="screen-only-grid">
-          <figure class="screen-only-card reveal"><img src="assets/evidence/screen-only-overview.jpg" alt="裁切後的電子紙即時總覽畫面"><figcaption><b>即時總覽</b><span>溫度・濕度・亮度</span></figcaption></figure>
-          <figure class="screen-only-card reveal reveal-delay"><img src="assets/evidence/screen-only-temperature.jpg" alt="裁切後的電子紙溫度 Gauge 畫面"><figcaption><b>溫度趨勢</b><span>Gauge + 最近 10 分鐘</span></figcaption></figure>
-          <figure class="screen-only-card reveal reveal-delay-2"><img src="assets/evidence/screen-only-humidity.jpg" alt="裁切後的電子紙濕度 Gauge 畫面"><figcaption><b>濕度趨勢</b><span>Gauge + 資料折線</span></figcaption></figure>
-          <figure class="screen-only-card reveal"><img src="assets/evidence/screen-only-light.jpg" alt="裁切後的電子紙亮度 Gauge 畫面"><figcaption><b>亮度趨勢</b><span>相對亮度百分比</span></figcaption></figure>
+          <figure class="screen-only-card reveal"><img src="assets/evidence/screen-only-overview.jpg" alt="裁切後的 ILI9225 即時總覽畫面"><figcaption><b>即時總覽</b><span>溫度・濕度・亮度</span></figcaption></figure>
+          <figure class="screen-only-card reveal reveal-delay"><img src="assets/evidence/screen-only-temperature.jpg" alt="裁切後的 ILI9225 溫度 Gauge 畫面"><figcaption><b>溫度趨勢</b><span>Gauge + 最近 10 分鐘</span></figcaption></figure>
+          <figure class="screen-only-card reveal reveal-delay-2"><img src="assets/evidence/screen-only-humidity.jpg" alt="裁切後的 ILI9225 濕度 Gauge 畫面"><figcaption><b>濕度趨勢</b><span>Gauge + 資料折線</span></figcaption></figure>
+          <figure class="screen-only-card reveal"><img src="assets/evidence/screen-only-light.jpg" alt="裁切後的 ILI9225 亮度 Gauge 畫面"><figcaption><b>亮度趨勢</b><span>相對亮度百分比</span></figcaption></figure>
         </div>
         <div class="source-gallery reveal">
           <div class="screen-only-heading source-gallery-heading">
@@ -171,17 +171,17 @@
           </div>
 
           <div class="source-group">
-            <div class="source-group-heading"><span class="proof-kicker">LATEST SYSTEM · ILI9225</span><h4>最新主系統實機紀錄</h4><p>保留實際接線與現場脈絡，搭配上方的電子紙畫面裁切圖閱讀。</p></div>
+            <div class="source-group-heading"><span class="proof-kicker">LATEST SYSTEM · ILI9225</span><h4>最新主系統實機紀錄</h4><p>保留實際接線與現場脈絡，搭配上方的 ILI9225 顯示畫面裁切圖閱讀；電子紙成果另列於硬體原型章節。</p></div>
             <div class="source-photo-grid">
               <figure class="source-photo-card reveal"><img src="assets/evidence/report-source/report-0914-120-upright.jpg" alt="0914 系統整體與手機監控畫面"><figcaption><b>整體展示情境</b><span>實機、手機與資料畫面</span></figcaption></figure>
               <figure class="source-photo-card reveal reveal-delay"><img src="assets/evidence/report-source/report-new-1000010362.jpg" alt="新增 ILI9225 最新主系統展示照片"><figcaption><b>新增主系統展示</b><span>桌面說明、實機與手機儀表板</span></figcaption></figure>
               <figure class="source-photo-card reveal reveal-delay-2"><img src="assets/evidence/report-source/report-0914-084722-upright.jpg" alt="ILI9225 最新主系統即時數值畫面"><figcaption><b>即時數值頁</b><span>ESP32 與 ILI9225 實機</span></figcaption></figure>
               <figure class="source-photo-card reveal reveal-delay-2"><img src="assets/evidence/report-source/report-0914-085002-upright.jpg" alt="ILI9225 最新主系統趨勢畫面"><figcaption><b>趨勢頁</b><span>Gauge 與資料折線</span></figcaption></figure>
-              <figure class="source-photo-card reveal"><img src="assets/evidence/report-source/report-0914-093038.jpg" alt="ILI9225 最新主系統控制與狀態畫面"><figcaption><b>狀態／控制頁</b><span>展示輸出與頁面切換</span></figcaption></figure>
-              <figure class="source-photo-card reveal reveal-delay"><img src="assets/evidence/report-source/report-0914-2-1000010036.jpg" alt="0914-2 ILI9225 實機畫面一"><figcaption><b>補充實機照 01</b><span>顯示器與麵包板</span></figcaption></figure>
-              <figure class="source-photo-card reveal reveal-delay-2"><img src="assets/evidence/report-source/report-0914-2-1000010037.jpg" alt="0914-2 ILI9225 實機畫面二"><figcaption><b>補充實機照 02</b><span>趨勢與圖形頁</span></figcaption></figure>
-              <figure class="source-photo-card reveal"><img src="assets/evidence/report-source/report-0914-2-1000010038.jpg" alt="0914-2 ILI9225 實機畫面三"><figcaption><b>補充實機照 03</b><span>Gauge 顯示頁</span></figcaption></figure>
-              <figure class="source-photo-card reveal reveal-delay"><img src="assets/evidence/report-source/report-0914-2-1000010039.jpg" alt="0914-2 ILI9225 實機畫面四"><figcaption><b>補充實機照 04</b><span>另一組現場角度</span></figcaption></figure>
+              <figure class="source-photo-card reveal"><img src="assets/evidence/report-source/report-0914-093038-upright.jpg" alt="ILI9225 最新主系統控制與狀態畫面"><figcaption><b>狀態／控制頁</b><span>展示輸出與頁面切換</span></figcaption></figure>
+              <figure class="source-photo-card reveal reveal-delay"><img src="assets/evidence/report-source/report-0914-2-1000010036-upright.jpg" alt="0914-2 ILI9225 實機畫面一"><figcaption><b>補充實機照 01</b><span>顯示器與麵包板</span></figcaption></figure>
+              <figure class="source-photo-card reveal reveal-delay-2"><img src="assets/evidence/report-source/report-0914-2-1000010037-upright.jpg" alt="0914-2 ILI9225 實機畫面二"><figcaption><b>補充實機照 02</b><span>趨勢與圖形頁</span></figcaption></figure>
+              <figure class="source-photo-card reveal"><img src="assets/evidence/report-source/report-0914-2-1000010038-upright.jpg" alt="0914-2 ILI9225 實機畫面三"><figcaption><b>補充實機照 03</b><span>Gauge 顯示頁</span></figcaption></figure>
+              <figure class="source-photo-card reveal reveal-delay"><img src="assets/evidence/report-source/report-0914-2-1000010039-upright.jpg" alt="0914-2 ILI9225 實機畫面四"><figcaption><b>補充實機照 04</b><span>另一組現場角度</span></figcaption></figure>
               <figure class="source-photo-card reveal reveal-delay-2"><img src="assets/evidence/report-source/report-0914-1789354286164.jpg" alt="手機 IoT 儀表板與 ILI9225 實機"><figcaption><b>手機儀表板</b><span>遠端觀看情境</span></figcaption></figure>
             </div>
           </div>
@@ -206,7 +206,7 @@
               <figure class="source-photo-card reveal"><img src="assets/evidence/report-source/report-1000010356.jpg" alt="電子紙多頁畫面硬體照片"><figcaption><b>硬體原型 03</b><span>多頁顯示成果</span></figcaption></figure>
               <figure class="source-photo-card reveal reveal-delay"><img src="assets/evidence/report-source/report-1000010361.jpg" alt="電子紙與 LED 控制硬體照片"><figcaption><b>硬體原型 04</b><span>LED 輸出與頁面</span></figcaption></figure>
               <figure class="source-photo-card reveal reveal-delay-2"><img src="assets/evidence/report-source/report-new-1000010346.jpg" alt="新增電子紙與 ESP32 感測硬體照片"><figcaption><b>新增電子紙硬體</b><span>電子紙、ESP32、感測器與控制輸出</span></figcaption></figure>
-              <figure class="source-photo-card source-screen reveal reveal-delay-2"><img src="assets/evidence/report-source/report-codex-oled.jpg" alt="OLED 早期開發畫面"><figcaption><b>OLED 早期驗證</b><span>感測器與基本顯示</span></figcaption></figure>
+              <figure class="source-photo-card source-screen reveal reveal-delay-2"><img src="assets/evidence/report-source/report-codex-oled-upright.jpg" alt="OLED 早期開發畫面"><figcaption><b>OLED 早期驗證</b><span>感測器與基本顯示</span></figcaption></figure>
               <figure class="source-photo-card source-screen reveal"><img src="assets/evidence/report-source/report-codex-line-redacted.jpg" alt="已遮蔽姓名的 LINE 異常通知開發歷程畫面"><figcaption><b>LINE 通知</b><span>姓名已遮蔽的異常警示歷程</span></figcaption></figure>
               <figure class="source-photo-card source-screen reveal reveal-delay"><img src="assets/evidence/report-source/report-codex-sheets.jpg" alt="Google Sheets 資料保存歷程畫面"><figcaption><b>Google Sheets</b><span>資料保存歷程</span></figcaption></figure>
               <figure class="source-photo-card source-screen reveal reveal-delay-2"><img src="assets/evidence/report-source/report-codex-thingspeak.jpg" alt="ThingSpeak 圖表歷程畫面"><figcaption><b>ThingSpeak</b><span>圖表歷程</span></figcaption></figure>
@@ -254,7 +254,7 @@
         <div class="history-grid">
           <figure class="history-card oled-card reveal"><div class="history-image"><img src="assets/evidence/oled-history.jpg" alt="OLED 早期環境資料顯示畫面"></div><figcaption><span class="history-kicker">2026/08 · EARLY PROTOTYPE</span><h4>OLED 基礎驗證</h4><p>小尺寸、低負擔，適合先確認 DHT11／LDR 與畫面更新。</p></figcaption></figure>
           <figure class="history-card reveal reveal-delay"><div class="history-image"><img src="assets/evidence/mqtt-data-topic.jpg" alt="MQTT GO 顯示 god/class305/data 與 JSON 訊息"></div><figcaption><span class="history-kicker">2026/09 · TRANSPORT EVIDENCE</span><h4>MQTT data Topic</h4><p>畫面可見 <code>god/class305/data</code> 與 temp、humi、light 結構化訊息。</p></figcaption></figure>
-          <figure class="history-card reveal reveal-delay-2"><div class="history-image"><img src="assets/evidence/hardware-prototype.jpg" alt="ESP32、感測器與 ILI9225 麵包板實作"></div><figcaption><span class="history-kicker">HARDWARE · PROTOTYPE</span><h4>實體接線與原型</h4><p>ESP32、DHT11、光敏電阻、顯示器與控制輸出組成可操作的實驗平台。</p></figcaption></figure>
+          <figure class="history-card reveal reveal-delay-2"><div class="history-image"><img src="assets/evidence/hardware-prototype-upright.jpg" alt="ESP32、感測器與 OLED 麵包板實作"></div><figcaption><span class="history-kicker">HARDWARE · PROTOTYPE</span><h4>實體接線與原型</h4><p>ESP32、DHT11、光敏電阻、顯示器與控制輸出組成可操作的實驗平台。</p></figcaption></figure>
         </div>
         <div class="data-table-block reveal">
           <div class="table-heading"><p class="eyebrow">OLED HISTORY MATRIX</p><h3>OLED 歷程測試項目</h3><p>OLED 照片代表 2026/08 的開發階段，用來說明先完成感測與基本顯示，再逐步加入雲端服務的驗證路徑。</p></div>
